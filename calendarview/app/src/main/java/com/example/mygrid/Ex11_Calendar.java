@@ -2,8 +2,10 @@ package com.example.mygrid;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -19,6 +21,8 @@ public class Ex11_Calendar extends Activity implements View.OnClickListener,
     ArrayAdapter<String> adapter;
     TextView textYear;
     TextView textMon;
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +33,24 @@ public class Ex11_Calendar extends Activity implements View.OnClickListener,
 
         mItems=new ArrayList<String>();
         adapter = new ArrayAdapter<String>(this,
-                        android.R.layout.simple_list_item_1,mItems);
+                        android.R.layout.simple_list_item_1,mItems) {
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                TextView textView = (TextView) super.getView(position, convertView, parent);
+                //gridview의 토요일-> 파란색, 일요일-> 빨간색으로 바꾸기
+                if(position%7==0){
+                    // Set the color red
+                    textView.setTextColor(Color.parseColor("#FF0000"));
+                } else if(position%7==6){
+                    // Set the color blue
+                    textView.setTextColor(Color.parseColor("#0000FF"));
+                } else{
+                    textView.setTextColor(Color.parseColor("#000000"));
+                }
+                return textView;
+            }
+        };
+
         GridView gird = (GridView) this.findViewById(R.id.grid1);
         gird.setAdapter(adapter);
         gird.setOnItemClickListener(this);
@@ -85,6 +106,7 @@ public class Ex11_Calendar extends Activity implements View.OnClickListener,
         for (int i = 0; i < day; i++) {
             mItems.add("");
         }
+
 
         current.setDate(32);
         int last = 32 - current.getDate();
