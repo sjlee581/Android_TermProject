@@ -1,49 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width = "fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
         android:gravity="center"
         android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="이전달"
+            android:textSize="8pt" />
+
+
+        <Button
+            android:id="@+id/bt_account"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Login" />
+
         <EditText
             android:id="@+id/edit1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="년도 입력" />
+            android:layout_weight="3"
+            android:hint="연" />
+
         <TextView
+            android:id="@+id/yeartext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="년"/>
+            android:layout_weight="1"
+            android:hint="년" />
+
         <EditText
             android:id="@+id/edit2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="월을 입력" />
+            android:hint="월" />
+
         <TextView
+            android:id="@+id/monthtext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="월"/>
+            android:layout_weight="1"
+            android:hint="월" />
+
         <Button
             android:id="@+id/bt1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="클릭"/>
+            android:layout_weight="2"
+            android:hint="이동" />
+
+        <Button
+            android:id="@+id/bt3"
+            android:layout_width="78dp"
+            android:layout_height="wrap_content"
+            android:text="다음달"
+            android:textSize="8pt" />
+
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:orientation="vertical">
-
         <GridView
             android:id="@+id/grid1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:numColumns="7"></GridView>
+            android:numColumns="7">
+        </GridView>
     </LinearLayout>
 </LinearLayout>

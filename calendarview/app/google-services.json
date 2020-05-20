@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "613808021568",
+    "firebase_url": "https://mygrid-89afb.firebaseio.com",
+    "project_id": "mygrid-89afb",
+    "storage_bucket": "mygrid-89afb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613808021568:android:708915475ab545fa057fa5",
+        "android_client_info": {
+          "package_name": "com.example.mygrid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "613808021568-n9cbfvlted36cn5fsvmacpej2up5li87.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mygrid",
+            "certificate_hash": "6b5c39cdcb0589841fc20647edfc5be446cc27d2"
+          }
+        },
+        {
+          "client_id": "613808021568-7lut5cejshek63607qqiadi2o17gsd1j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_LyjBRTBylYcwzQvhJj6n_uYcoD_AxCM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "613808021568-7lut5cejshek63607qqiadi2o17gsd1j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

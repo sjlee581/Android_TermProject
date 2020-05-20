@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -26,10 +27,8 @@ public class ExToday extends Activity implements AdapterView.OnItemClickListener
 
         Intent intent = getIntent();
         today = intent.getStringExtra("Param1");
-
         TextView text = (TextView) findViewById(R.id.texttoday);
         text.setText(today);
-
         mDBHelper = new MyDBHelper(this, "Today.db", null, 1);
         SQLiteDatabase db = mDBHelper.getWritableDatabase();
 

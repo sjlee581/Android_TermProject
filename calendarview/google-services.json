@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "753773820949",
+    "firebase_url": "https://mygrid-b47d5.firebaseio.com",
+    "project_id": "mygrid-b47d5",
+    "storage_bucket": "mygrid-b47d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:753773820949:android:56d37525fb4fc7e83de21c",
+        "android_client_info": {
+          "package_name": "com.example.mygrid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "753773820949-atjflf1tm70an88qtm6g8l6036ibcd51.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBigoa6a4RwaXaGgVpqk_Of4PA8bWZQ7LM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "753773820949-atjflf1tm70an88qtm6g8l6036ibcd51.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
