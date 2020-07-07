@@ -31,12 +31,13 @@ public class Ex11_Calendar extends TabActivity implements AdapterView.OnItemClic
     TextView textMon;
     TextView textDay;
     Button bt_account;
-
+    Button bt_dest;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-
+        Intent intent = new Intent(this, LoadingActivity.class);
+        startActivity(intent);
         textYear=(TextView) this.findViewById(R.id.edit1);
         textMon=(TextView) this.findViewById(R.id.edit2);
 
@@ -47,7 +48,7 @@ public class Ex11_Calendar extends TabActivity implements AdapterView.OnItemClic
         TabSpec tabSpecTab2 = tabHost.newTabSpec("TAB2").setIndicator("날씨");
         tabSpecTab2.setContent(R.id.tab2);
         tabHost.addTab(tabSpecTab2);
-        TabSpec tabSpecTab3 = tabHost.newTabSpec("TAB3").setIndicator("메모");
+        TabSpec tabSpecTab3 = tabHost.newTabSpec("TAB3").setIndicator("지도");
         tabSpecTab3.setContent(R.id.tab3);
         tabHost.addTab(tabSpecTab3);
         tabHost.setCurrentTab(0);
@@ -96,8 +97,15 @@ public class Ex11_Calendar extends TabActivity implements AdapterView.OnItemClic
                 startActivity(intent);
             }
         });
+        bt_dest = (Button) findViewById(R.id.bt_dest);
+        bt_dest.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(getApplicationContext(), com.example.mygrid.MapsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
-
     @Override
     public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
         if(mItems.get(arg2).equals("")){

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width = "fill_parent"
+    android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical">
     <TabHost
@@ -100,13 +100,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/bt_dest"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="주변 의료시설찾기"/>
+                    </LinearLayout>
                 </LinearLayout>
             </FrameLayout>
             <TabWidget
                 android:id="@android:id/tabs"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            </TabWidget>
+                android:layout_height="wrap_content"></TabWidget>
         </LinearLayout>
     </TabHost>
 </LinearLayout>
